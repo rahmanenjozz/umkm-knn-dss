@@ -1,0 +1,492 @@
+{
+  "n_data": 300,
+  "n_splits": 5,
+  "n_repeats": 10,
+  "terbaik": {
+    "k": 1,
+    "weighted": false
+  },
+  "hasil": [
+    {
+      "k": 1,
+      "weighted": false,
+      "accuracy_mean": 0.7393333333333333,
+      "accuracy_std": 0.014666666666666658,
+      "macro_f1_mean": 0.7412126418224879,
+      "macro_f1_std": 0.014604752908765208,
+      "classes": [
+        "TIDAK",
+        "TUNDA",
+        "YA"
+      ],
+      "confusion_matrix": [
+        [
+          806,
+          174,
+          0
+        ],
+        [
+          194,
+          645,
+          201
+        ],
+        [
+          3,
+          210,
+          767
+        ]
+      ]
+    },
+    {
+      "k": 3,
+      "weighted": false,
+      "accuracy_mean": 0.7173333333333333,
+      "accuracy_std": 0.00799999999999999,
+      "macro_f1_mean": 0.7173846109305978,
+      "macro_f1_std": 0.00835938202763968,
+      "classes": [
+        "TIDAK",
+        "TUNDA",
+        "YA"
+      ],
+      "confusion_matrix": [
+        [
+          808,
+          172,
+          0
+        ],
+        [
+          299,
+          572,
+          169
+        ],
+        [
+          1,
+          207,
+          772
+        ]
+      ]
+    },
+    {
+      "k": 5,
+      "weighted": false,
+      "accuracy_mean": 0.7123333333333333,
+      "accuracy_std": 0.014067298564006132,
+      "macro_f1_mean": 0.7138314573173414,
+      "macro_f1_std": 0.013920338895688193,
+      "classes": [
+        "TIDAK",
+        "TUNDA",
+        "YA"
+      ],
+      "confusion_matrix": [
+        [
+          818,
+          162,
+          0
+        ],
+        [
+          300,
+          591,
+          149
+        ],
+        [
+          3,
+          249,
+          728
+        ]
+      ]
+    },
+    {
+      "k": 7,
+      "weighted": false,
+      "accuracy_mean": 0.713,
+      "accuracy_std": 0.009597453365925313,
+      "macro_f1_mean": 0.7158092204113646,
+      "macro_f1_std": 0.009896902726822435,
+      "classes": [
+        "TIDAK",
+        "TUNDA",
+        "YA"
+      ],
+      "confusion_matrix": [
+        [
+          821,
+          159,
+          0
+        ],
+        [
+          302,
+          618,
+          120
+        ],
+        [
+          4,
+          276,
+          700
+        ]
+      ]
+    },
+    {
+      "k": 9,
+      "weighted": false,
+      "accuracy_mean": 0.7033333333333334,
+      "accuracy_std": 0.01290994448735805,
+      "macro_f1_mean": 0.705606714537401,
+      "macro_f1_std": 0.012645543626897855,
+      "classes": [
+        "TIDAK",
+        "TUNDA",
+        "YA"
+      ],
+      "confusion_matrix": [
+        [
+          828,
+          151,
+          1
+        ],
+        [
+          305,
+          607,
+          128
+        ],
+        [
+          7,
+          298,
+          675
+        ]
+      ]
+    },
+    {
+      "k": 11,
+      "weighted": false,
+      "accuracy_mean": 0.7153333333333333,
+      "accuracy_std": 0.007630348761506405,
+      "macro_f1_mean": 0.7173530524674355,
+      "macro_f1_std": 0.00778887056535324,
+      "classes": [
+        "TIDAK",
+        "TUNDA",
+        "YA"
+      ],
+      "confusion_matrix": [
+        [
+          841,
+          139,
+          0
+        ],
+        [
+          286,
+          637,
+          117
+        ],
+        [
+          16,
+          296,
+          668
+        ]
+      ]
+    },
+    {
+      "k": 13,
+      "weighted": false,
+      "accuracy_mean": 0.7076666666666666,
+      "accuracy_std": 0.013420548092798254,
+      "macro_f1_mean": 0.7098698031190669,
+      "macro_f1_std": 0.01351869886817643,
+      "classes": [
+        "TIDAK",
+        "TUNDA",
+        "YA"
+      ],
+      "confusion_matrix": [
+        [
+          835,
+          144,
+          1
+        ],
+        [
+          271,
+          646,
+          123
+        ],
+        [
+          18,
+          320,
+          642
+        ]
+      ]
+    },
+    {
+      "k": 15,
+      "weighted": false,
+      "accuracy_mean": 0.7016666666666668,
+      "accuracy_std": 0.010461569884316815,
+      "macro_f1_mean": 0.7033683258520015,
+      "macro_f1_std": 0.009600708189877755,
+      "classes": [
+        "TIDAK",
+        "TUNDA",
+        "YA"
+      ],
+      "confusion_matrix": [
+        [
+          843,
+          137,
+          0
+        ],
+        [
+          293,
+          633,
+          114
+        ],
+        [
+          23,
+          328,
+          629
+        ]
+      ]
+    },
+    {
+      "k": 1,
+      "weighted": true,
+      "accuracy_mean": 0.7393333333333333,
+      "accuracy_std": 0.014666666666666658,
+      "macro_f1_mean": 0.7412126418224879,
+      "macro_f1_std": 0.014604752908765208,
+      "classes": [
+        "TIDAK",
+        "TUNDA",
+        "YA"
+      ],
+      "confusion_matrix": [
+        [
+          806,
+          174,
+          0
+        ],
+        [
+          194,
+          645,
+          201
+        ],
+        [
+          3,
+          210,
+          767
+        ]
+      ]
+    },
+    {
+      "k": 3,
+      "weighted": true,
+      "accuracy_mean": 0.7376666666666667,
+      "accuracy_std": 0.006155395104206465,
+      "macro_f1_mean": 0.7391583321473456,
+      "macro_f1_std": 0.006497547110983068,
+      "classes": [
+        "TIDAK",
+        "TUNDA",
+        "YA"
+      ],
+      "confusion_matrix": [
+        [
+          809,
+          171,
+          0
+        ],
+        [
+          220,
+          632,
+          188
+        ],
+        [
+          0,
+          208,
+          772
+        ]
+      ]
+    },
+    {
+      "k": 5,
+      "weighted": true,
+      "accuracy_mean": 0.7243333333333333,
+      "accuracy_std": 0.014456832294800952,
+      "macro_f1_mean": 0.726126409043329,
+      "macro_f1_std": 0.014412214712472022,
+      "classes": [
+        "TIDAK",
+        "TUNDA",
+        "YA"
+      ],
+      "confusion_matrix": [
+        [
+          812,
+          168,
+          0
+        ],
+        [
+          241,
+          619,
+          180
+        ],
+        [
+          1,
+          237,
+          742
+        ]
+      ]
+    },
+    {
+      "k": 7,
+      "weighted": true,
+      "accuracy_mean": 0.7206666666666667,
+      "accuracy_std": 0.01671991493864595,
+      "macro_f1_mean": 0.7238743288343323,
+      "macro_f1_std": 0.016508226701254035,
+      "classes": [
+        "TIDAK",
+        "TUNDA",
+        "YA"
+      ],
+      "confusion_matrix": [
+        [
+          807,
+          173,
+          0
+        ],
+        [
+          262,
+          638,
+          140
+        ],
+        [
+          2,
+          261,
+          717
+        ]
+      ]
+    },
+    {
+      "k": 9,
+      "weighted": true,
+      "accuracy_mean": 0.7186666666666667,
+      "accuracy_std": 0.010022197585581927,
+      "macro_f1_mean": 0.7213654586862253,
+      "macro_f1_std": 0.009738667775698519,
+      "classes": [
+        "TIDAK",
+        "TUNDA",
+        "YA"
+      ],
+      "confusion_matrix": [
+        [
+          816,
+          164,
+          0
+        ],
+        [
+          259,
+          633,
+          148
+        ],
+        [
+          5,
+          268,
+          707
+        ]
+      ]
+    },
+    {
+      "k": 11,
+      "weighted": true,
+      "accuracy_mean": 0.7273333333333334,
+      "accuracy_std": 0.013727506854649334,
+      "macro_f1_mean": 0.7301752213394774,
+      "macro_f1_std": 0.013115356173781605,
+      "classes": [
+        "TIDAK",
+        "TUNDA",
+        "YA"
+      ],
+      "confusion_matrix": [
+        [
+          819,
+          161,
+          0
+        ],
+        [
+          249,
+          649,
+          142
+        ],
+        [
+          4,
+          262,
+          714
+        ]
+      ]
+    },
+    {
+      "k": 13,
+      "weighted": true,
+      "accuracy_mean": 0.7266666666666667,
+      "accuracy_std": 0.014063348739819327,
+      "macro_f1_mean": 0.728910390039286,
+      "macro_f1_std": 0.013525682210364844,
+      "classes": [
+        "TIDAK",
+        "TUNDA",
+        "YA"
+      ],
+      "confusion_matrix": [
+        [
+          833,
+          147,
+          0
+        ],
+        [
+          250,
+          648,
+          142
+        ],
+        [
+          7,
+          274,
+          699
+        ]
+      ]
+    },
+    {
+      "k": 15,
+      "weighted": true,
+      "accuracy_mean": 0.724,
+      "accuracy_std": 0.015040685563571313,
+      "macro_f1_mean": 0.7266444213922298,
+      "macro_f1_std": 0.014515230857544845,
+      "classes": [
+        "TIDAK",
+        "TUNDA",
+        "YA"
+      ],
+      "confusion_matrix": [
+        [
+          831,
+          149,
+          0
+        ],
+        [
+          255,
+          654,
+          131
+        ],
+        [
+          10,
+          283,
+          687
+        ]
+      ]
+    }
+  ],
+  "dataset": "sintetis"
+}
