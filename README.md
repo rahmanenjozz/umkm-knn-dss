@@ -4,6 +4,14 @@ Sistem pendukung keputusan penerima modal UMKM dengan **K-Nearest Neighbors yang
 
 > Proyek tugas kuliah (2018) yang dikembangkan ulang. Untuk demonstrasi, **bukan** untuk menentukan penerima modal sungguhan.
 
+![Halaman Prediksi](docs/prediksi.png)
+
+<details>
+<summary>Halaman Evaluasi</summary>
+
+![Halaman Evaluasi](docs/evaluasi.png)
+</details>
+
 ## Fitur
 - **Prediksi**: masukkan data UMKM → keputusan YA / TUNDA / TIDAK, proporsi suara, tabel tetangga terdekat, dan posisi input di grafik PCA 2D
 - **Evaluasi**: accuracy per nilai k (repeated stratified 5-fold × 10), confusion matrix, perbandingan dengan baseline
