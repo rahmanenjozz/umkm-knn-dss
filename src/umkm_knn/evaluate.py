@@ -8,11 +8,11 @@ from pathlib import Path
 
 import numpy as np
 
-from umkm_knn.data import load_data
+from umkm_knn.data import DATASETS, load_data
 from umkm_knn.knn import KNNClassifier
 from umkm_knn.preprocessing import MinMaxScaler
 
-REPORT_PATH = Path(__file__).resolve().parents[2] / "reports" / "evaluasi.json"
+REPORT_DIR = Path(__file__).resolve().parents[2] / "reports"
 
 
 def stratified_kfold(
@@ -112,23 +112,27 @@ def pilih_k(
 
 
 def main() -> None:
-    X, y = load_data()
-    report = pilih_k(X, y)
+    REPORT_DIR.mkdir(exist_ok=True)
+    for nama in DATASETS:
+        X, y = load_data(nama)
+        report = pilih_k(X, y)
+        report["dataset"] = nama
 
-    print(f"{'k':>3} {'bobot':>8} {'accuracy':>16} {'macro-F1':>16}")
-    for r in report["hasil"]:
-        bobot = "jarak" if r["weighted"] else "sama"
-        print(
-            f"{r['k']:>3} {bobot:>8} "
-            f"{r['accuracy_mean']:>9.3f} ± {r['accuracy_std']:.3f} "
-            f"{r['macro_f1_mean']:>9.3f} ± {r['macro_f1_std']:.3f}"
-        )
-    t = report["terbaik"]
-    print(f"\nTerbaik: k={t['k']}, weighted={t['weighted']}")
+        print(f"\n=== Dataset: {nama} ({len(y)} baris) ===")
+        print(f"{'k':>3} {'bobot':>8} {'accuracy':>16} {'macro-F1':>16}")
+        for r in report["hasil"]:
+            bobot = "jarak" if r["weighted"] else "sama"
+            print(
+                f"{r['k']:>3} {bobot:>8} "
+                f"{r['accuracy_mean']:>9.3f} ± {r['accuracy_std']:.3f} "
+                f"{r['macro_f1_mean']:>9.3f} ± {r['macro_f1_std']:.3f}"
+            )
+        t = report["terbaik"]
+        print(f"Terbaik: k={t['k']}, weighted={t['weighted']}")
 
-    REPORT_PATH.parent.mkdir(exist_ok=True)
-    REPORT_PATH.write_text(json.dumps(report, indent=2))
-    print(f"Disimpan ke {REPORT_PATH.relative_to(REPORT_PATH.parents[1])}")
+        path = REPORT_DIR / f"evaluasi_{nama}.json"
+        path.write_text(json.dumps(report, indent=2))
+        print(f"Disimpan ke reports/{path.name}")
 
 
 if __name__ == "__main__":
