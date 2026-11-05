@@ -34,16 +34,16 @@ def index():
 			flash('Silahkan tentukan jarak ke tetanggaan','warning')
 			return render_template('base.html')
 
-		items = ReadData('dataset.txt')
+		items = ReadData('data/umkm.csv')
 
 		lama_usaha		= int(lama_usaha)
 		jumlah_pekerja	= int(jumlah_pekerja)
 		omzet 			= int(omzet)
 		jumlah_aset		= int(jumlah_aset)
 		k 				= int(k)
-		
-		#newItem = {'LamaUsaha' : 4, 'Pekerja' : 15, 'Omzet' : 4, 'JumlahAset' : 6 }
-		newItem = {'LamaUsaha' : lama_usaha, 'Pekerja' : jumlah_pekerja, 'Omzet' : omzet, 'JumlahAset' : jumlah_aset }
+
+		newItem = {'lama_usaha_tahun': lama_usaha, 'jumlah_pekerja': jumlah_pekerja,
+           'omzet_juta': omzet, 'jumlah_aset': jumlah_aset}
 
 		accuracy2, maxi, count, neighbors = Classify(newItem, k, items)
 
@@ -55,7 +55,7 @@ def index():
 
 @app.route('/dataset')
 def dataset():
-	items = ReadData('dataset.txt')
+	items = ReadData('data/umkm.csv')
 	items = pd.DataFrame(items)
 	return render_template('dataset.html',items=items.to_html(classes='table table-striped table-hover table-bordered table-sm table-responsive-sm'))
 
@@ -84,7 +84,7 @@ def readDataTest(fileName):
 			itemFeatures[f] = v
 		#Append temp dict to items
 		items.append(itemFeatures)
-	shuffle(items) 
+	shuffle(items)
 	return items
 
 def ReadData(fileName):
@@ -111,7 +111,7 @@ def ReadData(fileName):
 			itemFeatures[f] = v
 		#Append temp dict to items
 		items.append(itemFeatures)
-	#shuffle(items) 
+	#shuffle(items)
 	return items
 
 def EuclideanDistance(x,y):
@@ -184,7 +184,7 @@ def K_FoldValidation(K,k,Items):
 		trainingSet = Items[i * l:(i + 1) * l]
 		item2 = readDataTest('test.txt')
 
-		newItem = {'LamaUsaha' : 4, 'Pekerja' : 15, 'Omzet' : 4, 'JumlahAset' : 6}
+		newItem = {'lama_usaha_tahun': 4, 'jumlah_pekerja': 15, 'omzet_juta': 4, 'jumlah_aset': 6}
 		testSet = item2[:i * l] + item2[(i + 1) * l:]
 
 		for item in testSet:
